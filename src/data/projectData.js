@@ -9,7 +9,7 @@ const projectData = [
   title: "CubeSat Communication System",
   description: "Led a team of 5 engineers in designing and implementing the communication subsystem for a CubeSat, using LoRa and UART for ground-to-space communication.",
   tech: "Leadership, ESP32, LoRa, UART, Embedded C, Satellite Systems",
-  github: "https://github.com/yourusername/cubesat-comms"
+  github: "https://github.com/JacquesBTe/cubesat-comms"
   },
   {
   title: "Fiber Optic Preamplifier Design",
