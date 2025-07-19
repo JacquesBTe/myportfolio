@@ -15,7 +15,7 @@ const projectData = [
   title: "Fiber Optic Preamplifier Design",
   description: "Designed and simulated a low-noise transimpedance amplifier for optical signals using discrete analog components, focusing on signal integrity and bandwidth optimization.",
   tech: "Analog Design, Transimpedance Amplifier, MultiSim, Circuit Simulation, Noise Analysis",
-  github: ""
+  github: "https://github.com/JacquesBTe/Fiber_Optic_Preamp_Design"
   },
   {
   title: "Configurable FPGA Matrix Multiplication Hardware Accelerator",
