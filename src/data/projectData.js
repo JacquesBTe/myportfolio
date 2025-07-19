@@ -15,7 +15,12 @@ const projectData = [
   title: "Fiber Optic Preamplifier Design",
   description: "Designed and simulated a low-noise transimpedance amplifier for optical signals using discrete analog components, focusing on signal integrity and bandwidth optimization.",
   tech: "Analog Design, Transimpedance Amplifier, MultiSim, Circuit Simulation, Noise Analysis",
-  github: "#" // You can update this to a real link later
+  },
+  {
+  title: "Configurable FPGA Matrix Multiplication Hardware Accelerator",
+  description: "Designed and implemented a parameterizable N×N matrix multiplication hardware accelerator on Xilinx Artix-7 FPGA, featuring pipelined MAC units, UART data interface, and real-time monitoring. Achieved 100MHz operation with 512 MAC operations per computation cycle.",
+  tech: "Verilog HDL, FPGA Design, Xilinx Vivado, UART Protocol, Python, Basys 3, Digital Signal Processing",
+  github: "https://github.com/JacquesBTe/matrix_multiplier_basys3"
   }
 
 ];
