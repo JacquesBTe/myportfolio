@@ -3,7 +3,7 @@ const projectData = [
     title: "Wake Word Detection on STM32",
     description: "Trained and deployed a real-time wake word model using MFCC features and TensorFlow Lite Micro.",
     tech: "TensorFlow Lite Micro, STM32, Embedded AI, C/C++",
-    github: "https://github.com/yourusername/wakeword-stm32"
+    github: "https://github.com/JacquesBTe/Wake_Word_Detection_STM32"
   },
   {
   title: "CubeSat Communication System",
