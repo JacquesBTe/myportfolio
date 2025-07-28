@@ -4,9 +4,12 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md p-4 mb-4">
       <div className="max-w-5xl mx-auto flex justify-between items-center">
-        <Link to="/home" className="text-2xl font-bold hover:opacity-80">
+        {/* Clicking your name returns to Home */}
+        <Link to="/" className="text-2xl font-bold hover:opacity-80">
           Jacques Te
-          </Link>
+        </Link>
+
+        {/* Navigation links */}
         <div className="space-x-4">
           <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium">
             About
