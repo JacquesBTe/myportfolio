@@ -42,7 +42,7 @@ const Home = () => {
         <img
           src="/me.jpg"
           alt="Jacques Te"
-          className="rounded-2xl shadow-lg max-w-xs w-full"
+          className="w-32 h-32 rounded-full shadow-md"
         />
       </div>
     </section>
