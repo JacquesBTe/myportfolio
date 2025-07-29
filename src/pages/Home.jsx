@@ -40,7 +40,7 @@ const Home = () => {
       {/* Image Section */}
       <div>
         <img
-          src="/Jacques.jpg"
+          src={process.env.PUBLIC_URL + "/Jacques.jpg"}
           alt="Jacques Te"
           className="w-32 h-32 rounded-full shadow-md"
         />
