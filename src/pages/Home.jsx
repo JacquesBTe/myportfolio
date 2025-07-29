@@ -40,7 +40,7 @@ const Home = () => {
       {/* Image Section */}
       <div>
         <img
-          src="/me.jpg"
+          src="/Jacques.jpg"
           alt="Jacques Te"
           className="w-32 h-32 rounded-full shadow-md"
         />
