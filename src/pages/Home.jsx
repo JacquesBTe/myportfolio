@@ -32,6 +32,14 @@ const Home = () => {
               Email Me
             </a>
 
+            {/* Phone button */}
+            <a
+              href="tel:+16196487766"
+              className="bg-teal-600 text-white px-5 py-2 rounded hover:bg-teal-700 transition"
+            >
+              Call: +1 (619) 648‑7766
+            </a>
+
             <Link
               to="/projects"
               className="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
@@ -39,7 +47,7 @@ const Home = () => {
               View Projects
             </Link>
 
-            {/* New: smooth-scroll to #contact on Home */}
+            {/* Smooth-scroll to #contact on Home */}
             <HashLink
               smooth
               to="/#contact"
@@ -55,7 +63,7 @@ const Home = () => {
           <img
             src={process.env.PUBLIC_URL + "/Jacques.jpg"}
             alt="Jacques Te"
-            className="w-48 h-48 rounded-full shadow-md object-cover"
+            className="w-49 h-49 rounded-full shadow-md object-cover"
           />
         </div>
       </section>
@@ -79,6 +87,7 @@ const Home = () => {
               <span>📧</span>
               <span>jacquezte@gmail.com</span>
             </a>
+
             <a
               href="https://www.linkedin.com/in/jacques-te/"
               target="_blank"
@@ -87,6 +96,15 @@ const Home = () => {
             >
               <span>🔗</span>
               <span>LinkedIn</span>
+            </a>
+
+            {/* Phone chip */}
+            <a
+              href="tel:+16196487766"
+              className="inline-flex items-center gap-2 rounded-full border border-gray-300 px-4 py-2 text-sm font-medium hover:bg-gray-50 transition"
+            >
+              <span>📞</span>
+              <span>+1 (619) 648‑7766</span>
             </a>
           </div>
         </div>
