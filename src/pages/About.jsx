@@ -50,7 +50,8 @@ const About = () => {
             <span> I also love to travel and explore new environments — having visited over 20 countries, I’ve gained a broad perspective and appreciation for diverse cultures around the world.</span> 
 
             {/* 📈 Finance & Analysis */}
-            <span> Additionally, I actively study financial markets and investing, applying my analytical mindset and math background to conduct quantitative and technical analysis on price movements and trading patterns.</span>
+            <span> Additionally, I actively study financial markets and investing, applying my analytical mindset and math background to conduct quantitative and technical analysis on price movements and trading patterns to actively manage my own investing portfolio. 
+              It is also my belief that having this removes any financial pressure on the engineering side of me so I can purely focus on innovating.</span>
             </p>
 
 
