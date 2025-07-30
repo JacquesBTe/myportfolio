@@ -32,14 +32,6 @@ const Home = () => {
               Email Me
             </a>
 
-            {/* Phone button */}
-            <a
-              href="tel:+16196487766"
-              className="bg-teal-600 text-white px-5 py-2 rounded hover:bg-teal-700 transition"
-            >
-              Call: +1 (619) 648‑7766
-            </a>
-
             <Link
               to="/projects"
               className="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
@@ -76,7 +68,7 @@ const Home = () => {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-semibold mb-4">Contact</h2>
           <p className="text-gray-700 mb-6">
-            I’m open to opportunities and collaborations in VLSI, embedded systems, and hardware design.
+            I’m open to opportunities and collaborations.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
