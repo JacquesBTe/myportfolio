@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   // Use PUBLIC_URL so it works even if the app is deployed under a subpath (e.g., GitHub Pages)
@@ -26,9 +27,11 @@ const Navbar = () => {
             Projects
           </Link>
 
-          {/* Name button with logo (adjust route/anchor as you like) */}
-          <Link
+          {/* Name button -> smooth scroll to #contact on Home */}
+          <HashLink
+            smooth
             to="/#contact"
+            scroll={(el) => el?.scrollIntoView({ behavior: "smooth", block: "start" })}
             className="inline-flex items-center gap-2 rounded-full border border-gray-300 px-3 py-1.5 text-sm font-medium shadow-sm hover:shadow transition"
             aria-label="Contact Jacques Te"
           >
@@ -38,7 +41,7 @@ const Navbar = () => {
               className="h-5 w-5 rounded-full ring-1 ring-black/10"
             />
             <span>Jacques Te</span>
-          </Link>
+          </HashLink>
         </div>
       </div>
     </nav>
