@@ -34,6 +34,12 @@ const projectData = [
   description: "Implemented a real-time IoT alert system bridging TradingView signals to an ESP32 device via Make.com webhooks. Designed to display alerts on a 0.96″ OLED screen with audio differentiation through a piezo buzzer and user interaction via button controls. Supported multiple alert types (BUY/SELL/LONG/SHORT) with on-device history storage for the last 20 alerts. Achieved sub-second (<1s) cloud-to-device latency over WiFi, enabling immediate trading awareness and decision-making. Integrated auto-display sleep mode and alert review interface for efficient, user-friendly operation.",
   tech: "ESP32, PlatformIO, Make.com Webhooks, Arduino Framework, IoT Systems, OLED Display (SSD1306), Embedded WiFi Networking, Real-Time Notification Systems",
   github: "https://github.com/JacquesBTe/tradingview_alert_notifier_esp32"
+  },
+  {
+  title: "AM Signal Generation and Demodulation System",
+  description: "Designed and implemented a complete AM transmitter–receiver system using op-amp summing amplifier, diode-based nonlinear modulation, and Sallen–Key band-pass filtering. Demonstrated clean AM generation at 40 kHz and accurate envelope detection recovery of the baseband signal (~82 Hz). Verified operation through Multisim simulations and oscilloscope measurements, achieving a modulation index of 0.66 with minimal distortion.",
+  tech: "Analog Circuit Design, Multisim, Op-Amp Design, Band-Pass Filter, Communication Systems, Signal Processing",
+  github: "https://github.com/JacquesBTe/AM_signal_generation_demodulation_design"
   }
 ];
 
