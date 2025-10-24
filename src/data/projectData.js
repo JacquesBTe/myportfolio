@@ -40,7 +40,13 @@ const projectData = [
   description: "Designed and implemented a complete AM transmitter–receiver system using op-amp summing amplifier, diode-based nonlinear modulation, and Sallen–Key band-pass filtering. Demonstrated clean AM generation at 40 kHz and accurate envelope detection recovery of the baseband signal (~82 Hz). Verified operation through Multisim simulations and oscilloscope measurements, achieving a modulation index of 0.66 with minimal distortion.",
   tech: "Analog Circuit Design, Multisim, Op-Amp Design, Band-Pass Filter, Communication Systems, Signal Processing",
   github: "https://github.com/JacquesBTe/AM_signal_generation_demodulation_design"
-  }
+  },
+  {
+  title: "FM Demodulation Using Differentiator-Based Detector",
+  description: "Designed and implemented a differentiator-based FM demodulator that converts frequency variations into amplitude variations using op-amp differentiation, envelope detection, and low-pass filtering. Simulated and constructed the circuit in Multisim and hardware to recover an 80 Hz message signal from a 40 kHz carrier, achieving near-perfect demodulation at high modulation index (β ≈ 50).",
+  tech: "Analog Communication Systems, Op-Amp Differentiator, Envelope Detector, Low-Pass Filter, Multisim Simulation, FM Demodulation",
+  github: "https://github.com/JacquesBTe/FM_Demodulation_Differentiator_Design"
+  },
 ];
 
 
