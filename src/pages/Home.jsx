@@ -11,7 +11,7 @@ const Home = () => {
         <div className="text-center md:text-left max-w-xl">
           <h1 className="text-5xl font-bold mb-4">Hi, I'm Jacques Benzly Te</h1>
           <p className="text-lg text-gray-700 mb-6">
-            Electrical Engineer focused on VLSI Design, Embedded Systems, AI, and Hardware Engineering.
+            Electrical Engineer primarily interested on Embedded Systems, Edge AI, Hardware and Analog Circuits.
           </p>
 
           {/* Buttons */}

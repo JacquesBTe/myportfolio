@@ -21,6 +21,7 @@ const About = () => {
         <p className="mb-6 text-lg leading-relaxed">
           I enjoy working on hands-on engineering projects that bring together low-level firmware, signal processing, and applied machine learning — especially on resource-constrained microcontrollers like STM32 and ESP32. 
           Whether it's deploying real-time wake word models or developing CubeSat communication subsystems, I’m always exploring how embedded intelligence and efficient hardware design can drive real-world innovation.
+          I also recently bought a Jetson Orin Nano Super Developer Kit. I am transitioning from resource constraint devices into more powerful embedded systems devices specifically designed for Edge AI. 
         </p>
 
         {/* 🛠 Focus Areas Section Title */}
@@ -28,13 +29,23 @@ const About = () => {
 
         {/* 🧰 Skills/Tools List */}
         <ul className="list-disc list-inside mb-6 text-base">
-          <li>Embedded Systems: STM32/ESP32 development with low-level drivers, real-time firmware, and peripheral integration (UART, I2C, SPI, ADC, PWM, Watchdog)</li>
-          <li>VLSI & Digital Hardware Design: Verilog (primarily), VHDL, RTL Design, Vivado, ModelSim, Universal Verification Methodology (UVM), Computer Architecture</li>
-          <li>Embedded AI: TensorFlow Lite Micro, MFCC, Edge Inference, C/C++</li>
-          <li>Analog Electronics: Transitor Amplifiers, Transimpedance Design, Signal Conditioning</li>
-          <li>Communication Systems: CubeSat UHF/LoRa, UART AT Commands, ESP32/Raspberry Pi integration</li>
-          <li>Artificial Intelligence: Deep learning model development, dataset preprocessing, model training, and deployment for real-time inference on embedded systems</li>
-          <li>Tools: MATLAB, Keil uVision, Git, Altium PCB Designer, Multisim, Oscilloscope, LM Studio</li>
+          <li>Embedded Systems: Jetson Orin Nano, STM32, and ESP32 development — low-level driver programming, RTOS-based firmware, and peripheral integration (UART, I²C, SPI, ADC, PWM, Watchdog, DMA)</li>
+
+          <li>Digital & VLSI Design: Verilog (primary), VHDL, RTL design, FPGA prototyping (Basys 3 – Artix-7), Vivado, ModelSim, timing analysis, and introductory UVM for functional verification</li>
+
+          <li>Embedded AI & Edge ML: TensorFlow Lite Micro, MFCC feature extraction, TinyML model optimization, Edge Impulse deployment, and C/C++ inference integration for low-power devices</li>
+
+          <li>Analog & Mixed-Signal Electronics: Transistor amplifiers, transimpedance preamps, active filters, and sensor signal conditioning for photodiodes and analog front-end design</li>
+
+          <li>Applied Electromagnetics & RF Design: Transmission line analysis, S-parameter simulation, Smith chart impedance matching, antenna design, and circuit optimization using Keysight ADS</li>
+
+          <li>Communication Systems: CubeSat UHF/LoRa telemetry, UART AT command interfacing, ESP32–Raspberry Pi integration, digital modulation (AM/FM/ASK/FSK), and spectrum analysis</li>
+
+          <li>Industrial & Robotic Automation: KUKA KR 10 R900-2 (KR C4 Compact) programming and simulation in RoboDK, WorkVisual I/O configuration, and integration of external control systems (ESP32, pneumatic pick-and-place, gluing, UV curing)</li>
+
+          <li>Artificial Intelligence: Deep learning model development, dataset preprocessing, quantization, and deployment for real-time embedded inference on edge hardware</li>
+
+          <li>Tools & Platforms: MATLAB, Keysight ADS, Keil uVision, Vivado, ModelSim, RoboDK, Git/GitHub, Altium Designer, Multisim, Oscilloscope, and LM Studio</li>
         </ul>
 
         {/* 🌱 NEW Interests Section */}
