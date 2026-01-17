@@ -47,6 +47,12 @@ const projectData = [
   tech: "Analog Communication Systems, Op-Amp Differentiator, Envelope Detector, Low-Pass Filter, Multisim Simulation, FM Demodulation",
   github: "https://github.com/JacquesBTe/FM_Demodulation_Differentiator_Design"
   },
+  {
+  title: "DOFBOT Face Tracking Robot",
+  description: "Developed real-time 3D face tracking system on NVIDIA Jetson Orin Nano controlling a 6-DOF robot arm at 30 FPS using OpenCV Haar Cascades and I2C servo communication. Resolved hardware compatibility between legacy Yahboom software (Ubuntu 18.04/Jetson Nano) and modern Jetson Orin Nano by migrating I2C bus configuration (bus 1→7) and deploying ROS Noetic Docker environment. Implemented custom servo calibration framework with offset/inversion compensation and intelligent multi-phase search algorithm (local→expanded→wide sweep) with 3-frame temporal smoothing to maintain stable tracking through occlusions, achieving <100ms latency and ±2° positioning accuracy.",
+  tech: "Python, OpenCV, Docker, ROS Noetic, NVIDIA Jetson Orin Nano, I2C Protocol, Computer Vision, Haar Cascades, Real-Time Systems, Servo Control",
+  github: "https://github.com/JacquesBTe/dofbot-face-tracking"
+  },
 ];
 
 
