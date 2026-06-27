@@ -4,20 +4,18 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 
+// Vite exposes the GitHub Pages base path here ("/myportfolio/").
+// react-router wants it without a trailing slash.
+const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 function App() {
   return (
-    // basename helps on GitHub Pages when your site is under /myportfolio
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={basename}>
       <Navbar />
       <Routes>
-        {/* Default landing page */}
         <Route path="/" element={<Home />} />
-
-        {/* Other pages */}
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-
-        {/* Fallback: any unknown path -> Home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>

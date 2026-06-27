@@ -1,59 +1,121 @@
-const projectData = [
-  {
-    title: "Wake Word Detection on STM32",
-    description: "Trained and deployed a real-time wake word model using MFCC features and TensorFlow Lite Micro.",
-    tech: "TensorFlow Lite Micro, STM32, Embedded AI, C/C++",
-    github: "https://github.com/JacquesBTe/Wake_Word_Detection_STM32"
-  },
-  {
-  title: "CubeSat Communication System",
-  description: "Led a team of 5 engineers in designing and implementing the communication subsystem for a CubeSat, using LoRa and UART for ground-to-space communication.",
-  tech: "Leadership, ESP32, LoRa, UART, Embedded C, Satellite Systems",
-  github: "https://github.com/JacquesBTe/cubesat-comms"
-  },
-  {
-  title: "Fiber Optic Preamplifier Design",
-  description: "Designed and simulated a low-noise transimpedance amplifier for optical signals using discrete analog components, focusing on signal integrity and bandwidth optimization.",
-  tech: "Analog Design, Transimpedance Amplifier, MultiSim, Circuit Simulation, Noise Analysis",
-  github: "https://github.com/JacquesBTe/Fiber_Optic_Preamp_Design"
-  },
-  {
-  title: "Configurable FPGA Matrix Multiplication Hardware Accelerator",
-  description: "Designed and implemented a parameterizable N×N matrix multiplication hardware accelerator on Xilinx Artix-7 FPGA, featuring pipelined MAC units, UART data interface, and real-time monitoring. Achieved 100MHz operation with 512 MAC operations per computation cycle.",
-  tech: "Verilog HDL, FPGA Design, Xilinx Vivado, UART Protocol, Python, Basys 3, Digital Signal Processing",
-  github: "https://github.com/JacquesBTe/matrix_multiplier_basys3"
-  },
-  {
-  title: "ML-Powered Finger Timer",
-  description: "Developed a gesture-controlled countdown timer on ESP32 using a 5MP camera and a TinyML model trained with Edge Impulse. The system recognizes 1–5 finger gestures in real time to set timer duration, achieving >95% classification accuracy across varied lighting conditions and hand orientations. Integrated OLED display rendering, countdown logic, and interrupt-driven alerts for seamless hands-free operation. Optimized TinyML inference and memory usage to run within ESP32’s 520KB SRAM and compute constraints, enabling reliable on-device execution without external compute resources.",
-  tech: "ESP32, Arduino Framework, PlatformIO, Edge Impulse, TinyML, Embedded Computer Vision, OLED Display, Real-Time Systems",
-  github: "https://github.com/JacquesBTe/Finger_Timer_Cam"
-  },
-  {
-  title: "TradingView ESP32 Alert Notifier",
-  description: "Implemented a real-time IoT alert system bridging TradingView signals to an ESP32 device via Make.com webhooks. Designed to display alerts on a 0.96″ OLED screen with audio differentiation through a piezo buzzer and user interaction via button controls. Supported multiple alert types (BUY/SELL/LONG/SHORT) with on-device history storage for the last 20 alerts. Achieved sub-second (<1s) cloud-to-device latency over WiFi, enabling immediate trading awareness and decision-making. Integrated auto-display sleep mode and alert review interface for efficient, user-friendly operation.",
-  tech: "ESP32, PlatformIO, Make.com Webhooks, Arduino Framework, IoT Systems, OLED Display (SSD1306), Embedded WiFi Networking, Real-Time Notification Systems",
-  github: "https://github.com/JacquesBTe/tradingview_alert_notifier_esp32"
-  },
-  {
-  title: "AM Signal Generation and Demodulation System",
-  description: "Designed and implemented a complete AM transmitter–receiver system using op-amp summing amplifier, diode-based nonlinear modulation, and Sallen–Key band-pass filtering. Demonstrated clean AM generation at 40 kHz and accurate envelope detection recovery of the baseband signal (~82 Hz). Verified operation through Multisim simulations and oscilloscope measurements, achieving a modulation index of 0.66 with minimal distortion.",
-  tech: "Analog Circuit Design, Multisim, Op-Amp Design, Band-Pass Filter, Communication Systems, Signal Processing",
-  github: "https://github.com/JacquesBTe/AM_signal_generation_demodulation_design"
-  },
-  {
-  title: "FM Demodulation Using Differentiator-Based Detector",
-  description: "Designed and implemented a differentiator-based FM demodulator that converts frequency variations into amplitude variations using op-amp differentiation, envelope detection, and low-pass filtering. Simulated and constructed the circuit in Multisim and hardware to recover an 80 Hz message signal from a 40 kHz carrier, achieving near-perfect demodulation at high modulation index (β ≈ 50).",
-  tech: "Analog Communication Systems, Op-Amp Differentiator, Envelope Detector, Low-Pass Filter, Multisim Simulation, FM Demodulation",
-  github: "https://github.com/JacquesBTe/FM_Demodulation_Differentiator_Design"
-  },
-  {
-  title: "DOFBOT Face Tracking Robot",
-  description: "Developed real-time 3D face tracking system on NVIDIA Jetson Orin Nano controlling a 6-DOF robot arm at 30 FPS using OpenCV Haar Cascades and I2C servo communication. Resolved hardware compatibility between legacy Yahboom software (Ubuntu 18.04/Jetson Nano) and modern Jetson Orin Nano by migrating I2C bus configuration (bus 1→7) and deploying ROS Noetic Docker environment. Implemented custom servo calibration framework with offset/inversion compensation and intelligent multi-phase search algorithm (local→expanded→wide sweep) with 3-frame temporal smoothing to maintain stable tracking through occlusions, achieving <100ms latency and ±2° positioning accuracy.",
-  tech: "Python, OpenCV, Docker, ROS Noetic, NVIDIA Jetson Orin Nano, I2C Protocol, Computer Vision, Haar Cascades, Real-Time Systems, Servo Control",
-  github: "https://github.com/JacquesBTe/dofbot-face-tracking"
-  },
+// Project catalog.
+// - tags: used by the filter UI on the Projects page (keep them from the TAGS list below)
+// - tech: tools/skills shown as chips
+// - featured: surfaced first / highlighted
+// - image: path under /public (resolved via asset()); null for now — slot a photo in later
+// - github: repo link (optional)
+
+export const TAGS = [
+  "Edge AI",
+  "Embedded",
+  "FPGA/VLSI",
+  "Analog",
+  "Communications",
+  "Robotics",
+  "IoT",
 ];
 
+const projectData = [
+  {
+    title: "CORDIC Trigonometric Processor — 130nm ASIC Tapeout",
+    description:
+      "Designed and taped out an 8-bit iterative CORDIC core in synthesizable Verilog computing sin/cos over a full 360° in Q2.6 fixed-point via shift-add rotations and an 8-entry arctan LUT. Added quadrant folding with sign reconstruction and 1/K gain compensation, verified across all 256 input angles against a MATLAB golden reference. Completed full RTL-to-GDS signoff via LibreLane — timing closed at 50MHz in a single 160×225µm tile with zero DRC/LVS errors.",
+    tech: ["Verilog", "SystemVerilog", "SKY130 PDK", "TinyTapeout", "LibreLane", "RTL-to-GDS", "MATLAB"],
+    tags: ["FPGA/VLSI"],
+    featured: true,
+    image: null,
+    github: "https://github.com/JacquesBTe/tt_um_jte_cordic",
+  },
+  {
+    title: "Wake Word Detection on STM32",
+    description:
+      "Real-time wake word detection on an STM32 Nucleo-L476RG, achieving >92% accuracy under varied noise. Trained a TensorFlow Lite model with MFCC features (35% fewer false activations) and deployed it within <80KB memory at sub-150ms latency.",
+    tech: ["TensorFlow Lite Micro", "STM32", "MFCC", "Embedded AI", "C/C++"],
+    tags: ["Edge AI", "Embedded"],
+    featured: true,
+    image: null,
+    github: "https://github.com/JacquesBTe/Wake_Word_Detection_STM32",
+  },
+  {
+    title: "CubeSat Communication System",
+    description:
+      "Led a 5-member team designing the 1U CubeSat communications subsystem, achieving >95% reliable two-way telemetry between satellite and ground station. Integrated LoRa (RYLR896) with ESP32/Raspberry Pi firmware, tuning frequency, addressing, and power for long-range, interference-free links.",
+    tech: ["Leadership", "ESP32", "LoRa", "UART", "Embedded C", "Satellite Systems"],
+    tags: ["Communications", "Embedded"],
+    featured: true,
+    image: null,
+    github: "https://github.com/JacquesBTe/cubesat-comms",
+  },
+  {
+    title: "Configurable FPGA Matrix Multiplication Accelerator",
+    description:
+      "Parameterizable N×N matrix-multiply accelerator on a Basys 3 (Artix-7) FPGA with pipelined MAC units, a 6-state FSM, and triple-port memory. UART data loading with Python-driven real-time verification; achieved 100MHz operation performing 512 MACs per cycle while maintaining timing closure.",
+    tech: ["Verilog HDL", "Xilinx Vivado", "FPGA", "UART", "Python", "Basys 3", "DSP"],
+    tags: ["FPGA/VLSI", "Embedded"],
+    featured: true,
+    image: null,
+    github: "https://github.com/JacquesBTe/matrix_multiplier_basys3",
+  },
+  {
+    title: "DOFBOT Face Tracking Robot",
+    description:
+      "Real-time 3D face tracking on an NVIDIA Jetson Orin Nano driving a 6-DOF arm at 30 FPS via OpenCV Haar Cascades and I2C servo control. Migrated legacy Yahboom tooling to ROS Noetic in Docker, added custom servo calibration and a multi-phase search with temporal smoothing — <100ms latency, ±2° accuracy.",
+    tech: ["Python", "OpenCV", "Docker", "ROS Noetic", "Jetson Orin Nano", "I2C", "Computer Vision"],
+    tags: ["Robotics", "Edge AI"],
+    featured: true,
+    image: null,
+    github: "https://github.com/JacquesBTe/dofbot-face-tracking",
+  },
+  {
+    title: "ML-Powered Finger Timer",
+    description:
+      "Gesture-controlled countdown timer on an ESP32 with a 5MP camera and an Edge Impulse TinyML model, recognizing 1–5 finger gestures in real time at >95% accuracy. Integrated OLED rendering, countdown logic, and interrupt-driven alerts, all within the ESP32's 520KB SRAM constraints.",
+    tech: ["ESP32", "PlatformIO", "Edge Impulse", "TinyML", "Embedded CV", "OLED"],
+    tags: ["Edge AI", "Embedded"],
+    featured: false,
+    image: null,
+    github: "https://github.com/JacquesBTe/Finger_Timer_Cam",
+  },
+  {
+    title: "Fiber Optic Preamplifier Design",
+    description:
+      "Two-stage BJT preamplifier (common-emitter + common-collector) for photodiode-based fiber-optic detection. Achieved −12.5kΩ transresistance (25% above target) with <1% distortion to a 50Ω load, extending −3dB bandwidth to 11.2MHz and cutting output impedance ~1kΩ → ~100Ω.",
+    tech: ["Analog Design", "Transimpedance Amplifier", "Multisim", "Noise Analysis"],
+    tags: ["Analog"],
+    featured: false,
+    image: null,
+    github: "https://github.com/JacquesBTe/Fiber_Optic_Preamp_Design",
+  },
+  {
+    title: "TradingView ESP32 Alert Notifier",
+    description:
+      "IoT alert system bridging TradingView signals to an ESP32 via Make.com webhooks. Displays BUY/SELL/LONG/SHORT alerts on a 0.96″ OLED with piezo audio cues and button controls, stores the last 20 alerts on-device, and achieves sub-second cloud-to-device latency over WiFi.",
+    tech: ["ESP32", "PlatformIO", "Make.com Webhooks", "IoT", "SSD1306 OLED", "WiFi"],
+    tags: ["IoT", "Embedded"],
+    featured: false,
+    image: null,
+    github: "https://github.com/JacquesBTe/tradingview_alert_notifier_esp32",
+  },
+  {
+    title: "AM Signal Generation & Demodulation",
+    description:
+      "Complete AM transmitter–receiver using an op-amp summing amplifier, diode nonlinear modulation, and Sallen–Key band-pass filtering. Demonstrated clean AM at 40kHz and accurate envelope recovery of an ~82Hz baseband at a 0.66 modulation index with minimal distortion.",
+    tech: ["Analog Design", "Multisim", "Op-Amp Design", "Band-Pass Filter", "Comms"],
+    tags: ["Analog", "Communications"],
+    featured: false,
+    image: null,
+    github: "https://github.com/JacquesBTe/AM_signal_generation_demodulation_design",
+  },
+  {
+    title: "FM Demodulation via Differentiator Detector",
+    description:
+      "Differentiator-based FM demodulator converting frequency variation to amplitude via op-amp differentiation, envelope detection, and low-pass filtering. Built in Multisim and hardware to recover an 80Hz message from a 40kHz carrier with near-perfect demodulation at high modulation index (β ≈ 50).",
+    tech: ["Analog Comms", "Op-Amp Differentiator", "Envelope Detector", "Multisim"],
+    tags: ["Analog", "Communications"],
+    featured: false,
+    image: null,
+    github: "https://github.com/JacquesBTe/FM_Demodulation_Differentiator_Design",
+  },
+];
 
 export default projectData;
