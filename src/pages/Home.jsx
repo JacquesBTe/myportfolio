@@ -30,12 +30,14 @@ const Home = () => {
 
             <Reveal delay={0.1}>
               <p className="mt-5 text-lg leading-relaxed text-gray-400">
-                Electrical Engineer focused on{" "}
-                <span className="text-gray-200">embedded systems</span>,{" "}
-                <span className="text-gray-200">edge AI</span>, and{" "}
-                <span className="text-gray-200">digital / analog hardware</span>{" "}
-                — from STM32 firmware to FPGA & RTL design.
+                Electrical Engineer working at the intersection of{" "}
+                <span className="text-gray-200">analog and digital</span>:{" "}
+                <span className="text-gray-200">mixed-signal PCBA design</span>,{" "}
+                <span className="text-gray-200">embedded systems</span>, and{" "}
+                <span className="text-gray-200">VLSI</span>, drawn to the compute
+                silicon behind 5G/6G and AI.
               </p>
+
             </Reveal>
 
             <Reveal delay={0.15}>
